@@ -6,12 +6,12 @@
 //
 
 class SmartTermo: Termo {
-    var power: String = ""
+    var power: Power
     var mode: SmartModes
     var status: SmartDeviceStatus
     var isOn: Bool
     
-    init(power: String, mode: SmartModes, status: SmartDeviceStatus, isOn: Bool) {
+    init(power: Power, mode: SmartModes, status: SmartDeviceStatus, isOn: Bool) {
         self.power = power
         self.mode = mode
         self.status = status

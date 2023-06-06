@@ -9,8 +9,6 @@ protocol SmartDevice {
     var isOn: Bool { get }
     var mode: SmartModes { get set }
     mutating func setMode(mode: SmartModes)
-    
-    
 }
 
 extension SmartDevice {
@@ -19,13 +17,14 @@ extension SmartDevice {
     }
 }
 protocol Bulb: SmartDevice {
-    var brightness: Int { get }
-    var color: String { get }
+    var brightness: Brightness { get }
+    var color: Color { get }
+    var status: SmartDeviceStatus { get }
 }
 protocol Termo: SmartDevice {
-    var power: String { get }
+    var power: Power { get }
+    
 }
 protocol Alarm: SmartDevice {
-    var power: String { get }
-    func setPower(_ power: String)
+    var power: Power { get }
 }
