@@ -11,24 +11,23 @@ enum SmartModes {
     case security
 }
 
-enum SmartDeviceStatus {
-    case on
-    case off
-    case alarm
+enum SmartDeviceStatus: String {
+    case on = "включено"
+    case off = "выключено"
 }
 
 enum Color: String {
-    case yellow = "Желтый"
-    case red = "Красный"
-    case blue = "Голубой"
+    case yellow = "желтый"
+    case red = "красный"
+    case blue = "голубой"
 }
 enum Brightness: String {
-    case low = "Низкая"
-    case medium = "Средняя"
-    case high = "Высокая"
+    case low = "низкая"
+    case medium = "средняя"
+    case high = "высокая"
 }
-enum Power: String {
-case low = "Низкая"
-case medium = "Средняя"
-case high = "Высокая"
+enum Temperature: String {
+case low = "низкая"
+case medium = "средняя"
+case high = "высокая"
 }

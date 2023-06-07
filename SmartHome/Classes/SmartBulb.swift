@@ -6,21 +6,21 @@
 //
 
 class SmartBulb: Bulb {
-    var power: Power
+    
     var brightness: Brightness
     var color: Color
     var mode: SmartModes {
         didSet {
             switch mode {
             case .night:
-                print("режим \(Brightness.low.rawValue)")
+                print("Освещение \(SmartDeviceStatus.on.rawValue), Яркость \(Brightness.low.rawValue), Цвет \(Color.blue.rawValue)")
                 
             case .morning:
-                power = .medium
+                print("Освещение \(SmartDeviceStatus.off.rawValue)")
             case .security:
                 brightness = .high
                 color = .red
-                status = .alarm
+                status = .on
             }
         }
     }
@@ -29,8 +29,7 @@ class SmartBulb: Bulb {
     func toggle() {
         print("the mode \(status)")
     }
-    init(power: Power, brightness: Brightness, color: Color, mode: SmartModes, status: SmartDeviceStatus, isOn: Bool) {
-        self.power = power
+    init(brightness: Brightness, color: Color, mode: SmartModes, status: SmartDeviceStatus, isOn: Bool) {
         self.brightness = brightness
         self.color = color
         self.mode = mode

@@ -22,9 +22,9 @@ protocol Bulb: SmartDevice {
     var status: SmartDeviceStatus { get }
 }
 protocol Termo: SmartDevice {
-    var power: Power { get }
+    var temperature: Temperature { get }
     
 }
 protocol Alarm: SmartDevice {
-    var power: Power { get }
+    var status: SmartDeviceStatus { get }
 }
