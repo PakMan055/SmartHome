@@ -5,7 +5,7 @@
 //  Created by Roman Pak on 06.06.2023.
 //
 
-enum SmartModes {
+enum SmartModes: String, CaseIterable {
     case night
     case morning
     case security

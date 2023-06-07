@@ -26,9 +26,9 @@ class SmartBulb: Bulb {
     }
     var status: SmartDeviceStatus
     var isOn: Bool
-    func toggle() {
-        print("the mode \(status)")
-    }
+//    func toggle() {
+//        print("the mode \(status)")
+//    }
     init(brightness: Brightness, color: Color, mode: SmartModes, status: SmartDeviceStatus, isOn: Bool) {
         self.brightness = brightness
         self.color = color
